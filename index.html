@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMR Калькулятор</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="theme-color" content="#1e5128"/>
+</head>
+<body>
+    <div class="container">
+        <h1>BMR Калькулятор</h1>
+        <p>Розрахунок за формулою @fitgymdiet</p>
+        <label>Стать:
+            <select id="gender">
+                <option value="female">Жінка</option>
+                <option value="male">Чоловік</option>
+            </select>
+        </label>
+        <label>Вік: <input type="number" id="age" /></label>
+        <label>Зріст (см): <input type="number" id="height" /></label>
+        <label>Вага (кг): <input type="number" id="weight" /></label>
+        <label>Рівень активності:
+            <select id="activity">
+                <option value="1.2">Сидячий</option>
+                <option value="1.375">Невелика активність</option>
+                <option value="1.55">Середня активність</option>
+                <option value="1.725">Висока активність</option>
+            </select>
+        </label>
+        <label>Цільова калорійність:
+            <select id="goal">
+                <option value="-0.3">-30%</option>
+                <option value="-0.2">-20%</option>
+                <option value="0">Підтримка</option>
+                <option value="0.1">+10%</option>
+                <option value="0.2">+20%</option>
+            </select>
+        </label>
+        <button onclick="calculateBMR()">Розрахувати</button>
+        <div id="result"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
